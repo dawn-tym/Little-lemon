@@ -1,13 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text&display=swap');
+
 body {
+  display: grid;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #edefee;
+} 
+
+h1 {
+  font-size: 56pt; /* Reduced from 60pt */
+  color: #f4ce14;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h3 {
+  font-size: 32pt; /* Reduced from 36pt */
+}
+
+.hero, .dishes, .about {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.header {
+  padding-right: 10px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: #f4ce14;
+  border-radius: 15px;
+  max-width: 60%;
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.list {
+  list-style: none;
+  padding: 5px;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+ul.list {
+  list-style: none;
+  display: flex;
+  gap: 60px;
+}
+
+.item {
+  cursor: pointer;
+}
+
+.item a {
+  text-decoration: none;
+  color: #495e57;
+  font-weight: bolder;
+  padding: 5px;
+  font-family: 'Karla', sans-serif;
+}
+
+.item a:hover {
+  background-color: #495e57d3;
+  color: #f4ce14;
+  overflow: hidden;
+}
+
+.hero {
+  background-color: #495e57;
+  color: #edefee;
+  font-family: 'Karla', sans-serif;
+}
+
+.hero h1, .hero h3 {
+  padding-left: 100px;
+  font-family: 'Markazi Text', sans-serif;
+  margin: 0;
+}
+
+.hero h5 {
+  padding-bottom: 20px;
+  padding-left: 100px;
+  font-weight: 450;
+  font-family: 'Karla', sans-serif;
+  font-size: 14pt; /* Reduced from 16pt */
+  width: 400px;
+}
+
+.hero-image {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+}
+
+.hero-image img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+h2 {
+  color: #333333;
+  padding: 30px;
+  font-family: 'Karla', sans-serif;
+  font-size: 20pt; /* Reduced from 18pt */
+  
+}
+
+.dishes {
+  display: flex;
+  gap: 110px;
+  justify-content: center;
+}
+
+section b {
+  font-size: 14pt; /* Reduced from 16pt */
+}
+
+section p {
+  font-size: 12pt; /* Reduced from 14pt */
+  width: 300px;
+  text-align: left;
+  padding: 20px;
+  padding-top: 10px;
+}
+
+article {
+  background-color: #f9f8fa;
+  color: #333333;
+  border-radius: 15px;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+  font-family: 'Karla', sans-serif;
+  height: 450px;
+}
+
+article img {
+  border-radius: 15px;
+}
+
+span {
+  color: #ee9972;
+  padding-left: 40px;
+}
+
+.about {
+  padding: 50px;
+  padding-left: 125px;
+}
+
+.about-box {
+  color: #edefee;
+  background-color: #495e57;
+  width: 500px;
+  padding: 20px;
+  padding-bottom: 40px;
+  border-radius: 15px;
+}
+
+.about-box h1 {
+  color: #f4ce14;
+  font-family: 'Markazi Text', sans-serif;
+  margin: 0;
+}
+
+.about-box h3 {
+  padding: 0;
+  font-family: 'Markazi Text', sans-serif;
+  margin: 0;
+}
+
+.about-box p {
+  font-family: 'Karla', sans-serif;
+}
+
+.footer {
+  display: flex;
+  background-color: #495e57;
+  margin: 0 auto;
+  color: #edefee;
+  max-width: 100%;
+  font-family: 'Karla', sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  flex: auto;
+  justify-content: space-evenly;
+}
+
+.copyright {
+  padding: 50px;
+}
+
+.footer-logo {
+  padding-left: 10px;
+  padding-right: 10px;
+  border-right: #edefee;
+  border-bottom: #495e57;
+  border-top: #495e57;
+  border-left: #495e57;
+  border-style: solid;
 }
