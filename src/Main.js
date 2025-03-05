@@ -63,6 +63,13 @@ function Main () {
 
             <div>
                 <b><h2>TESTIMONIALS</h2></b>
+                <form>
+                    <label>
+                    Name 
+                    <input type="text" name="name" />
+                    </label>
+                </form>
+                <button type="Submit">Submit</button>
             </div>
 
             <div className="about">

@@ -1,5 +1,8 @@
 import React from "react";
 import logo from "./images/Logo .jpg";
+import { Link } from "react-router-dom";
+
+
 
 function Header() {
     return (
@@ -7,12 +10,12 @@ function Header() {
             <img src={logo} alt="Logo" width={200} height={49} />
             <nav> 
                 <ul className="list">
-                    <li className="item"><a href="/Home">Home</a></li>
-                    <li className="item"><a href="/About">About</a></li>
-                    <li className="item"><a href="/Menu">Menu</a></li>
-                    <li className="item"><a href="/Reservations">Reservations</a></li>
-                    <li className="item"><a href="/Online order">Online order</a></li>
-                    <li className="item"><a href="/Login">Login</a></li>
+                    <li className="item"><Link to="/Home">Home</Link></li>
+                    <li className="item"><Link to="/About">About</Link></li>
+                    <li className="item"><Link to="/Menu">Menu</Link></li>
+                    <li className="item"><Link to="/Reservations">Reservations</Link></li>
+                    <li className="item"><Link to="/Online-order">Online order</Link></li>
+                    <li className="item"><Link to="/Login">Login</Link></li>
                 </ul>
             </nav>
         </div>
