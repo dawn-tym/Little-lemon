@@ -6,17 +6,19 @@ import BookingPage from './BookingPage';
 import Main from './Main';
 import Footer from './Footer';
 
-
 function App() {
   return (
-      <Router> {/* Wrap everything inside Router */}
-          <Header />
-          <Routes>
-              <Route path="/Reservations" element={<BookingPage />} />
-          </Routes>
-          <Main />
-          <Footer />
-      </Router>
+    <Router>
+      <Header />
+      <Routes>
+        {/* Home page */}
+        <Route path="/home" element={<Main />} />
+
+        {/* Reservations page */}
+        <Route path="/reservations" element={<BookingPage />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 
