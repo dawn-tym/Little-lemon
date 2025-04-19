@@ -12,9 +12,9 @@ function Footer() {
       <p>© 2025 Little Lemon. All rights reserved.</p>
       </div>
       <div className="footer-content">
-      <p><b>Doormat Navigation</b><br/>About<br/>Menu<br/>Reservations<br/>Online order<br/>Login</p>
-      <p><b>Contact Address</b><br/>Phone number<br/>E-mail</p>
-      <p><b>Social Media Links</b><br/>Instagram<br/>Facebook<br/>X<br/>Tiktok</p>
+      <p><b>Doormat Navigation</b><br/><br></br>About<br/>Menu<br/>Reservations<br/>Online order<br/>Login</p>
+      <p><b>Contact Address</b><br></br><br/>Phone number<br/>E-mail</p>
+      <p><b>Social Media Links</b><br></br><br/>Instagram<br/>Facebook<br/>X<br/>Tiktok</p>
       </div>
     </div>
     </>

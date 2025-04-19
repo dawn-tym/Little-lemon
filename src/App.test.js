@@ -25,3 +25,19 @@ test('renders updateTimes to return the same value it is provided', () => {
   const result = updateTimes(initialState, action);
   expect(result).toEqual(initialState);
 });
+
+test('saves booking data to localStorage'), () => {
+  const formData = {date: "2025-04-20", time: "18:00", guests: 2, occasion: "Birthday"};
+  const setItemSpy = jest.spyOn(window.localStorage.__proto__, 'setItem');
+
+  localStorage.setItem("bookings", JSON.stringify([formData]));
+  expect(setItemSpy).toHaveBeenCalledWith("bookings", JSON.stringify([formData]));
+}
+
+test('saves booking data to localStorage'), () => {
+  const formData = {date: "2025-04-20", time: "18:00", guests: 2, occasion: "Birthday"};
+  localStorage.setItem("bookings", JSON.stringify(formData));
+
+  const storedData = JSON.parse(localStorage.getItem("bookings"));
+  expect(storedData).toEqual(formData);
+}
