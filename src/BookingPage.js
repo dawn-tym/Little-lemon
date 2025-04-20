@@ -65,10 +65,10 @@ function BookingPage({ availableTimes = [], dispatch, submitForm }) {
         return (
             <form onSubmit={handleSubmit} style={{ display: 'grid', maxWidth: '200px', gap: '15px', paddingLeft: '30px', paddingBottom: '30px', fontFamily: 'markazi text', fontSize: '14pt' }}>
                 <label htmlFor="res-date">Choose date</label>
-                <input type="date" id="res-date" value={date} onChange={handleDateChange} />
+                <input type="date" id="res-date" value={date} onChange={handleDateChange} required />
 
                 <label htmlFor="res-time">Choose time</label>
-                <select id="res-time" value={time} onChange={handleTimeChange}>
+                <select id="res-time" value={time} onChange={handleTimeChange} required >
                     <option value="" >Select time</option>
                     {availableTimes.length > 0 ? (
                         availableTimes.map((availableTime, index) => (
@@ -82,16 +82,16 @@ function BookingPage({ availableTimes = [], dispatch, submitForm }) {
                 </select>
 
                 <label htmlFor="guests">Number of guests</label>
-                <input type="number" placeholder="1" min="1" max="10" id="guests" value={guests} onChange={handleGuestsChange} />
+                <input type="number" placeholder="1" min="1" max="10" id="guests" value={guests} aria-label="Number of guests" onChange={handleGuestsChange} required />
 
                 <label htmlFor="occasion">Occasion</label>
-                <select id="occasion" value={occasion} onChange={handleOccasionChange}>
+                <select id="occasion" value={occasion} onChange={handleOccasionChange} required >
                     <option>Birthday</option>
                     <option>Anniversary</option>
                     <option>Engagement</option>
                 </select>
 
-                <input type="submit" value="Make Your reservation" style={{ borderRadius: '8px', cursor: 'pointer' }} />
+                <input type="submit" value="Make Your reservation" disabled={!occasion} aria-label="Submit reservation form" style={{ borderRadius: '8px', cursor: 'pointer' }} />
             </form>
         );
     }
