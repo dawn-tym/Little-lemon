@@ -92,7 +92,8 @@ ul.list {
   font-weight: 450;
   font-family: 'Karla', sans-serif;
   font-size: 14pt; /* Reduced from 16pt */
-  width: 400px;
+  width: 350px;
+  margin-bottom: 0px;
 }
 
 .hero-image {
@@ -143,6 +144,15 @@ article {
   height: 450px;
 }
 
+article a {
+  text-decoration: none;
+  color:#333333;
+}
+
+article a:hover {
+  color: #ee9972;
+}
+
 article img {
   border-radius: 15px;
 }
@@ -150,6 +160,16 @@ article img {
 span {
   color: #ee9972;
   padding-left: 40px;
+}
+
+form button:hover {
+  background-color: #f4ce14;
+  color: #495e57;
+}
+
+.reserve {
+  background-color: #f4ce14;
+  color: #495e57;
 }
 
 .about {
@@ -209,4 +229,23 @@ span {
   border-top: #495e57;
   border-left: #495e57;
   border-style: solid;
+}
+
+.star-rating {
+  display: flex;
+  gap: 10px
+}
+
+.star {
+  font-size: 30px;
+  color: #ccc; /* Default gray color */
+  cursor: pointer;
+}
+
+.star-filled {
+  color: #f4ce14; /* Yellow color for selected stars */
+}
+
+.star-empty:hover {
+  color: #f4ce14; /* Yellow color on hover for unselected stars */
 }

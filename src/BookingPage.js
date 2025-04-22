@@ -63,7 +63,7 @@ function BookingPage({ availableTimes = [], dispatch, submitForm }) {
         };
 
         return (
-            <form onSubmit={handleSubmit} style={{ display: 'grid', maxWidth: '200px', gap: '15px', paddingLeft: '30px', paddingBottom: '30px', fontFamily: 'markazi text', fontSize: '14pt' }}>
+            <form onSubmit={handleSubmit} style={{ display: 'grid', maxWidth: '200px', gap: '15px', paddingLeft: '30px', paddingBottom: '30px', fontFamily: 'markazi text', fontSize: '18pt' }}>
                 <label htmlFor="res-date">Choose date</label>
                 <input type="date" id="res-date" value={date} onChange={handleDateChange} required />
 
@@ -91,7 +91,7 @@ function BookingPage({ availableTimes = [], dispatch, submitForm }) {
                     <option>Engagement</option>
                 </select>
 
-                <input type="submit" value="Make Your reservation" disabled={!occasion} aria-label="Submit reservation form" style={{ borderRadius: '8px', cursor: 'pointer' }} />
+                <input className="reserve" type="submit" value="Make Your reservation" disabled={!occasion} aria-label="Submit reservation form" style={{ borderRadius: '8px', backgroundColor:'#495e57',color:'#f4ce14', width:'160px', height:'30px', cursor: 'pointer' }} />
             </form>
         );
     }
