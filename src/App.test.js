@@ -1,11 +1,14 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
+import { MemoryRouter } from 'react-router-dom';
 import { initializeTimes, updateTimes } from './yourReducerFile'; // replace if in another file
 import BookingForm from './BookingForm'; // Update path if necessary
 
 describe('App Component Tests', () => {
   test('renders learn react link', () => {
-    render(<App />);
+    render( <MemoryRouter>
+      <App />
+    </MemoryRouter>);
     const linkElement = screen.getByText(/learn react/i);
     expect(linkElement).toBeInTheDocument();
   });

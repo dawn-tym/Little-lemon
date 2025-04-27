@@ -10,12 +10,12 @@ body {
 } 
 
 h1 {
-  font-size: 56pt; /* Reduced from 60pt */
-  color: #f4ce14;
+  font-size: 56pt; 
 }
 
 h3 {
-  font-size: 32pt; /* Reduced from 36pt */
+  font-size: 32pt; 
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .hero, .dishes, .about {
@@ -40,6 +40,7 @@ nav {
   flex-grow: 1;
   display: flex;
   justify-content: space-evenly;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .list {
@@ -66,6 +67,7 @@ ul.list {
   font-weight: bolder;
   padding: 5px;
   font-family: 'Karla', sans-serif;
+  transition: all 0.3s ease;
 }
 
 .item a:hover {
@@ -98,8 +100,8 @@ ul.list {
 
 .hero-image {
   position: absolute;
-  top: 100px;
-  left: 50%;
+  top: 49px;
+  left: 6.5%;
 }
 
 .hero-image img {
@@ -107,12 +109,42 @@ ul.list {
   border-radius: 10px;
 }
 
+.overlay-text {
+  position: absolute;
+  top: 20px; /* Adjust as needed */
+  right: 15%;
+}
+
+.reserve-button-link {
+  display: inline-block;
+  background-color: #f4ce14;
+  margin-left: 100px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333333;
+  font-family: 'Karla', sans-serif;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.reserve-button-link:hover {
+  background-color: #f1e8be;
+}
+
+
 h2 {
   color: #333333;
-  padding: 30px;
   font-family: 'Karla', sans-serif;
   font-size: 20pt; /* Reduced from 18pt */
-  
+  text-align: center;
+  padding-top: 30px;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .dishes {
@@ -142,11 +174,13 @@ article {
   box-sizing: border-box;
   font-family: 'Karla', sans-serif;
   height: 450px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 article a {
   text-decoration: none;
   color:#333333;
+  transition: color 0.3s ease;
 }
 
 article a:hover {
@@ -155,6 +189,7 @@ article a:hover {
 
 article img {
   border-radius: 15px;
+  
 }
 
 span {
@@ -162,19 +197,10 @@ span {
   padding-left: 40px;
 }
 
-form button:hover {
-  background-color: #f4ce14;
-  color: #495e57;
-}
-
-.reserve {
-  background-color: #f4ce14;
-  color: #495e57;
-}
-
 .about {
   padding: 50px;
   padding-left: 125px;
+  display: flex;
 }
 
 .about-box {
@@ -184,6 +210,8 @@ form button:hover {
   padding: 20px;
   padding-bottom: 40px;
   border-radius: 15px;
+  z-index: 2;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .about-box h1 {
@@ -200,6 +228,7 @@ form button:hover {
 
 .about-box p {
   font-family: 'Karla', sans-serif;
+  text-align: justify;
 }
 
 .footer {
@@ -231,21 +260,126 @@ form button:hover {
   border-style: solid;
 }
 
+.reservation-form {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  padding-top: 0;
+  align-items: center;
+}
+
+.reserve {
+  border-radius: 8px;
+  background-color: #495e57;
+  margin: 0 auto;
+  margin-top: 10px;
+  display: block;
+  font-weight: bold;
+  font-size: 14px;
+  color:#f4ce14;
+  width: 170px;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.reserve:hover {
+  background-color: #f4ce14;
+  color: #495e57;
+}
+
+.testimonials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.testimonials form {
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
 .star-rating {
   display: flex;
-  gap: 10px
+  gap: 10px;
+  background-color: #f9f8fa;
+  border-radius: 8px;
+  border: 2px solid #495e57;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .star {
   font-size: 30px;
-  color: #ccc; /* Default gray color */
+  color: #ccc; 
   cursor: pointer;
 }
 
 .star-filled {
-  color: #f4ce14; /* Yellow color for selected stars */
+  color: #f4ce14; 
 }
 
 .star-empty:hover {
-  color: #f4ce14; /* Yellow color on hover for unselected stars */
+  color: #f4ce14; 
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+  padding: 10px;
+  width: 300px;
+  font-size: 14px;
+  border: 2px solid #495e57;
+  border-radius: 8px;
+  font-family: 'Karla', sans-serif;
+  color: #333;
+  background-color: #f9f8fa;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #f4ce14;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+input:invalid, select:invalid {
+  border: 2px solid red;
+}
+
+.submit {
+  margin-top: 20px; 
+  font-family: karla; 
+  font-size: 16px;
+  background-color: #495E57; 
+  color: #F4CE14; 
+  width: 90px; 
+  height: 35px; 
+  border-radius: 8px; 
+  cursor:pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.submit:hover {
+  background-color: #F4CE14;
+  color: #495E57;
+}
+
+.section-divider {
+  height: 1px;
+  background-color: #495e57; 
+  margin: 50px auto;
+  width: 80%;
+  border: none;
 }

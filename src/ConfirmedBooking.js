@@ -12,7 +12,8 @@ function ConfirmedBooking () {
             marginLeft:'30px', 
             width:'30%', 
             borderRadius:'15px',
-            fontSize:'20px'}}>
+            fontSize:'20px',
+            boxShadow:'0 4px 8px rgba(0, 0, 0, 0.2)'}}>
             Your booking has been confirmed.<br/><br/>Thank you for choosing Little Lemon. We hope to see you again soon.</p>
             </div>
         </>
